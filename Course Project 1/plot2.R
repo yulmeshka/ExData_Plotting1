@@ -18,12 +18,12 @@ data_plot$Global_active_power<-as.numeric(data_plot$Global_active_power)
 
 #Making plot
 
-hist(data_plot$Global_active_power, main="Global Active Power", 
-     xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+plot(data_plot$Datetime, data_plot$Global_active_power, type="l",
+         ylab="Global Active Power (kilowatts)", xlab="")
 
 #Saving
 
-dev.copy(png, file="plot1.png", height=480, width=480)
+dev.copy(png, file="plot2.png", height=480, width=480)
 
 dev.off()
 
